@@ -25,7 +25,7 @@ class MultiHeadAttention(nn.Module):
             d_v: the dimension of the value
             n_heads: the number of heads
 
-        input:
+        inputs:
             q: the query tensor of shape [batch_size, seq_len, d_model]
             k: the key tensor of shape [batch_size, seq_len, d_model]
             v: the value tensor of shape [batch_size, seq_len, d_model]
@@ -33,7 +33,7 @@ class MultiHeadAttention(nn.Module):
             padding_mask: the masking tensor of shape [batch_size, seq_len, seq_len],
             it is used to mask out the padding tokens in the input
 
-        returns:
+        return:
             a float tensor of shape [batch_size, seq_len, d_model]
         '''
 
@@ -79,7 +79,6 @@ class MultiHeadAttention(nn.Module):
         # [batch_size, seq_len, d_model]
         
         return output
-        return x
 
     
 class Masked(nn.Module):
